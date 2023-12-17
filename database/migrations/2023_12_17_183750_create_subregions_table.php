@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('subregions', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('region_id');
+            $table->string('name');
+            $table->string('okato')->nullable();
+            $table->unique(['region_id', 'name']);
         });
     }
 

@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('regions', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name');
+            $table->string('dtp_stat')->nullable();
+            $table->string('dtp_stat_filename')->nullable();
+            $table->string('okato');
+            $table->string('iso');
+            $table->string('gost')->nullable();
         });
     }
 

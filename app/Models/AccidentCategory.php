@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class AccidentCategory extends Model
 {
     use HasFactory;
+
+    public $timestamps = false;
 }
